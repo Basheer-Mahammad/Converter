@@ -6,22 +6,23 @@
   <title>Marks, CGPA & Percentage Converter</title>
   <style>
     body {
-  font-family: 'Roboto', sans-serif; /*  Replace 'Roboto' with your chosen font from Google Fonts */
-  background: linear-gradient(to bottom, #e0f7fa, #b2ebf2); /* Gradient background */
+  font-family: 'Roboto', sans-serif; /* Replace with your chosen font */
+  background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
   margin: 0;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  color: #333; /* Darker text for better contrast */
 }
 
 .main-container {
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  width: 80%;
+  padding: 20px;
+  width: 90vw;
   max-width: 600px;
   text-align: center;
 }
@@ -56,7 +57,7 @@ label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #555; /* Darker label text */
+  color: #555; 
 }
 
 input, select {
@@ -67,18 +68,19 @@ input, select {
   border: 1px solid #ccc;
   border-radius: 8px;
   margin-bottom: 10px;
+  box-sizing: border-box; /* Include padding and border in width/height */
 }
 
 button {
-  padding: 10px 20px; /* Added padding for better button size */
+  padding: 12px 20px; 
   font-size: 1em;
   background-color: #4CAF50;
   color: white;
   cursor: pointer;
   border: none;
-  border-radius: 8px; /* Rounded buttons */
+  border-radius: 8px; 
   transition: background-color 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Added button shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
 button:hover {
@@ -113,6 +115,32 @@ select {
 
 .container button {
   margin-right: 10px;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .main-container {
+    width: 95vw;
+    padding: 10px;
+  }
+  h1 {
+    font-size: 1.8em;
+  }
+  .input-group {
+    margin-bottom: 10px;
+  }
+  input, select {
+    font-size: 1em;
+    width: 95%; 
+    max-width: 300px;
+  }
+  .output-text {
+    font-size: 1em;
+  }
+  .back-button {
+      font-size: 1em;
+  }
 }
 
   </style>
