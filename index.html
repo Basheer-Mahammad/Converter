@@ -6,150 +6,135 @@
   <title>Marks, CGPA & Percentage Converter</title>
   <style>
     body {
-  font-family: 'Roboto', sans-serif; /* Replace with your chosen font */
-  background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
-  margin: 0;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  color: #333; /* Darker text for better contrast */
-}
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+      margin: 0;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #333;
+    }
 
-.main-container {
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 90vw;
-  max-width: 600px;
-  text-align: center;
-}
+    .main-container {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 90vw;
+      max-width: 600px;
+      text-align: center;
+    }
 
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  color: #333;
-}
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #333;
+    }
 
-.container, .output-container {
-  margin-top: 20px;
-  text-align: left;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: none;
-  position: relative;
-  min-height: 200px;
-}
+    .container, .output-container {
+      margin-top: 20px;
+      text-align: left;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: none;
+      position: relative;
+      min-height: 200px;
+    }
 
-.container.active, .output-container.active {
-  display: block;
-}
+    .container.active, .output-container.active {
+      display: block;
+    }
 
-.input-group {
-  margin-bottom: 15px;
-}
+    .input-group {
+      margin-bottom: 15px;
+    }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #555; 
-}
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+    }
 
-input, select {
-  padding: 10px;
-  font-size: 1em;
-  width: 100%;
-  max-width: 400px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  box-sizing: border-box; /* Include padding and border in width/height */
-}
-
-button {
-  padding: 12px 20px; 
-  font-size: 1em;
-  background-color: #4CAF50;
-  color: white;
-  cursor: pointer;
-  border: none;
-  border-radius: 8px; 
-  transition: background-color 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-}
-
-button:hover {
-  background-color: #3e8e41;
-}
-
-select {
-  width: 100%;
-  max-width: 400px;
-}
-
-.output-container {
-  background-color: #e9f7f3;
-  padding: 20px;
-}
-
-.output-text {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
-}
-
-.back-button {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.container button {
-  margin-right: 10px;
-}
-
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .main-container {
-    width: 95vw;
-    padding: 10px;
-  }
-  h1 {
-    font-size: 1.8em;
-  }
-  .input-group {
-    margin-bottom: 10px;
-  }
-  input, select {
-    font-size: 1em;
-    width: 95%; 
-    max-width: 300px;
-  }
-  .output-text {
-    font-size: 1em;
-  }
-  .back-button {
+    input, select {
+      padding: 10px;
       font-size: 1em;
-  }
-}
+      width: 100%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
 
+    button {
+      padding: 12px 20px;
+      font-size: 1em;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+      background-color: #3e8e41;
+    }
+
+    .output-text {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .back-button {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .container button {
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .main-container {
+        width: 95vw;
+        padding: 10px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+      .input-group {
+        margin-bottom: 10px;
+      }
+      input, select {
+        font-size: 1em;
+        width: 95%;
+        max-width: 300px;
+      }
+      .output-text {
+        font-size: 1em;
+      }
+      .back-button {
+        font-size: 1em;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="main-container">
     <h1>Marks, CGPA & Percentage Converter</h1>
-
-    <!-- Dropdown Container -->
     <div id="dropdownContainer">
       <div class="input-group">
         <label for="convertFrom">Convert From:</label>
@@ -161,7 +146,7 @@ select {
         </select>
       </div>
       <div class="input-group">
-        <label for="convertTo"> To:</label>
+        <label for="convertTo">To:</label>
         <select id="convertTo">
           <option value="">Select...</option>
           <option value="marks">Marks</option>
@@ -172,246 +157,95 @@ select {
       <button id="submitConversion">Submit</button>
     </div>
 
-    <!-- Converter Container -->
-    <div id="converterContainer" class="container">
-      <div id="container1" class="container">
-        <h2>Marks to CGPA Converter</h2>
-        <div class="input-group">
-          <label for="marks1">Total Marks:</label>
-          <input type="number" id="marks1">
-        </div>
-        <div class="input-group">
-          <label for="obtainedMarks1">Obtained Marks:</label>
-          <input type="number" id="obtainedMarks1">
-        </div>
-        <div class="input-group">
-          <label for="cgpa1">Total CGPA:</label>
-          <input type="number" id="cgpa1">
-        </div>
-        <button onclick="convertMarksToCgpa()">Convert</button>
-        <button onclick="resetContainer('container1')">Reset</button>
-      </div>
+    <div id="converterContainer" class="container"></div>
 
-      <div id="container2" class="container">
-        <h2>Marks to Percentage Converter</h2>
-        <div class="input-group">
-          <label for="marks2">Total Marks:</label>
-          <input type="number" id="marks2">
-        </div>
-        <div class="input-group">
-          <label for="obtainedMarks2">Obtained Marks:</label>
-          <input type="number" id="obtainedMarks2">
-        </div>
-        <div class="input-group">
-          <label for="percentage2">Total Percentage:</label>
-          <input type="number" id="percentage2">
-        </div>
-        <button onclick="convertMarksToPercentage()">Convert</button>
-        <button onclick="resetContainer('container2')">Reset</button>
-      </div>
-
-      <div id="container3" class="container">
-        <h2>CGPA to Marks Converter</h2>
-        <div class="input-group">
-          <label for="cgpa3">Total CGPA:</label>
-          <input type="number" id="cgpa3">
-        </div>
-        <div class="input-group">
-          <label for="obtainedCgpa3">Obtained CGPA:</label>
-          <input type="number" id="obtainedCgpa3">
-        </div>
-        <div class="input-group">
-          <label for="marks3">Total Marks:</label>
-          <input type="number" id="marks3">
-        </div>
-        <button onclick="convertCgpaToMarks()">Convert</button>
-        <button onclick="resetContainer('container3')">Reset</button>
-      </div>
-
-      <div id="container4" class="container">
-        <h2>CGPA to Percentage Converter</h2>
-        <div class="input-group">
-          <label for="cgpa4">Total CGPA:</label>
-          <input type="number" id="cgpa4">
-        </div>
-        <div class="input-group">
-          <label for="obtainedCgpa4">Obtained CGPA:</label>
-          <input type="number" id="obtainedCgpa4">
-        </div>
-        <div class="input-group">
-          <label for="percentage4">Total Percentage:</label>
-          <input type="number" id="percentage4">
-        </div>
-        <button onclick="convertCgpaToPercentage()">Convert</button>
-        <button onclick="resetContainer('container4')">Reset</button>
-      </div>
-
-      <div id="container5" class="container">
-        <h2>Percentage to Marks Converter</h2>
-        <div class="input-group">
-          <label for="percentage5">Total Percentage:</label>
-          <input type="number" id="percentage5">
-        </div>
-        <div class="input-group">
-          <label for="obtainedPercentage5">Obtained Percentage:</label>
-          <input type="number" id="obtainedPercentage5">
-        </div>
-        <div class="input-group">
-          <label for="marks5">Total Marks:</label>
-          <input type="number" id="marks5">
-        </div>
-        <button onclick="convertPercentageToMarks()">Convert</button>
-        <button onclick="resetContainer('container5')">Reset</button>
-      </div>
-
-      <div id="container6" class="container">
-        <h2>Percentage to CGPA Converter</h2>
-        <div class="input-group">
-          <label for="percentage6">Total Percentage:</label>
-          <input type="number" id="percentage6">
-        </div>
-        <div class="input-group">
-          <label for="obtainedPercentage6">Obtained Percentage:</label>
-          <input type="number" id="obtainedPercentage6">
-        </div>
-        <div class="input-group">
-          <label for="cgpa6">Total CGPA:</label>
-          <input type="number" id="cgpa6">
-        </div>
-        <button onclick="convertPercentageToCgpa()">Convert</button>
-        <button onclick="resetContainer('container6')">Reset</button>
-      </div>
-      <button class="back-button" onclick="showDropdownContainer()">Back</button>
-    </div>
-
-    <!-- Output Container -->
     <div id="outputContainer" class="output-container">
       <div id="outputText" class="output-text"></div>
-      <button class="back-button" onclick="showConverterContainer()">Back</button>
+      <button class="back-button" onclick="showDropdownContainer()">Back</button>
     </div>
   </div>
 
   <script>
+    const containers = {
+      "marks-cgpa": {
+        title: "Marks to CGPA", calc: () => {
+          let total = +prompt("Enter Total Marks");
+          let obtained = +prompt("Enter Obtained Marks");
+          let cgpa = +prompt("Enter Total CGPA");
+          if (isNaN(total) || isNaN(obtained) || isNaN(cgpa) || total === 0) return "Invalid input!";
+          return `Obtained CGPA: ${((obtained / total) * cgpa).toFixed(2)}`;
+        }
+      },
+      "marks-percentage": {
+        title: "Marks to Percentage", calc: () => {
+          let total = +prompt("Enter Total Marks");
+          let obtained = +prompt("Enter Obtained Marks");
+          let perc = +prompt("Enter Total Percentage");
+          if (isNaN(total) || isNaN(obtained) || isNaN(perc) || total === 0) return "Invalid input!";
+          return `Obtained Percentage: ${((obtained / total) * perc).toFixed(2)}%`;
+        }
+      },
+      "cgpa-marks": {
+        title: "CGPA to Marks", calc: () => {
+          let total = +prompt("Enter Total CGPA");
+          let obtained = +prompt("Enter Obtained CGPA");
+          let marks = +prompt("Enter Total Marks");
+          if (isNaN(total) || isNaN(obtained) || isNaN(marks) || total === 0) return "Invalid input!";
+          return `Obtained Marks: ${((obtained / total) * marks).toFixed(2)}`;
+        }
+      },
+      "cgpa-percentage": {
+        title: "CGPA to Percentage", calc: () => {
+          let total = +prompt("Enter Total CGPA");
+          let obtained = +prompt("Enter Obtained CGPA");
+          let perc = +prompt("Enter Total Percentage");
+          if (isNaN(total) || isNaN(obtained) || isNaN(perc) || total === 0) return "Invalid input!";
+          return `Obtained Percentage: ${((obtained / total) * perc).toFixed(2)}%`;
+        }
+      },
+      "percentage-marks": {
+        title: "Percentage to Marks", calc: () => {
+          let total = +prompt("Enter Total Percentage");
+          let obtained = +prompt("Enter Obtained Percentage");
+          let marks = +prompt("Enter Total Marks");
+          if (isNaN(total) || isNaN(obtained) || isNaN(marks) || total === 0) return "Invalid input!";
+          return `Obtained Marks: ${((obtained / total) * marks).toFixed(2)}`;
+        }
+      },
+      "percentage-cgpa": {
+        title: "Percentage to CGPA", calc: () => {
+          let total = +prompt("Enter Total Percentage");
+          let obtained = +prompt("Enter Obtained Percentage");
+          let cgpa = +prompt("Enter Total CGPA");
+          if (isNaN(total) || isNaN(obtained) || isNaN(cgpa) || total === 0) return "Invalid input!";
+          return `Obtained CGPA: ${((obtained / total) * cgpa).toFixed(2)}`;
+        }
+      }
+    };
+
     function updateOutput(result) {
       const outputContainer = document.getElementById('outputContainer');
       const outputText = document.getElementById('outputText');
-      outputContainer.classList.add('active');
-      outputContainer.style.display = 'block';
       outputText.textContent = result;
+      outputContainer.classList.add('active');
+      document.getElementById('dropdownContainer').style.display = 'none';
     }
-
-    function convertMarksToCgpa() {
-      const totalMarks = parseFloat(document.getElementById('marks1').value);
-      const totalCgpa = parseFloat(document.getElementById('cgpa1').value);
-      const obtainedMarks = parseFloat(document.getElementById('obtainedMarks1').value);
-      const cgpa = (obtainedMarks / totalMarks) * totalCgpa;
-      updateOutput(`Obtained CGPA: ${cgpa.toFixed(2)}`);
-      showOutputContainer();
-    }
-
-    function convertMarksToPercentage() {
-      const totalMarks = parseFloat(document.getElementById('marks2').value);
-      const totalPercentage = parseFloat(document.getElementById('percentage2').value);
-      const obtainedMarks = parseFloat(document.getElementById('obtainedMarks2').value);
-      const percentage = (obtainedMarks / totalMarks) * totalPercentage;
-      updateOutput(`Obtained Percentage: ${percentage.toFixed(2)}%`);
-      showOutputContainer();
-    }
-
-    function convertCgpaToMarks() {
-      const totalCgpa = parseFloat(document.getElementById('cgpa3').value);
-      const totalMarks = parseFloat(document.getElementById('marks3').value);
-      const obtainedCgpa = parseFloat(document.getElementById('obtainedCgpa3').value);
-      const marks = (obtainedCgpa / totalCgpa) * totalMarks;
-      updateOutput(`Obtained Marks: ${marks.toFixed(2)}`);
-      showOutputContainer();
-    }
-
-    function convertCgpaToPercentage() {
-      const totalCgpa = parseFloat(document.getElementById('cgpa4').value);
-      const totalPercentage = parseFloat(document.getElementById('percentage4').value);
-      const obtainedCgpa = parseFloat(document.getElementById('obtainedCgpa4').value);
-      const percentage = (obtainedCgpa / totalCgpa) * totalPercentage;
-      updateOutput(`Obtained Percentage: ${percentage.toFixed(2)}%`);
-      showOutputContainer();
-    }
-
-    function convertPercentageToMarks() {
-      const totalPercentage = parseFloat(document.getElementById('percentage5').value);
-      const totalMarks = parseFloat(document.getElementById('marks5').value);
-      const obtainedPercentage = parseFloat(document.getElementById('obtainedPercentage5').value);
-      const marks = (obtainedPercentage / totalPercentage) * totalMarks;
-      updateOutput(`Obtained Marks: ${marks.toFixed(2)}`);
-      showOutputContainer();
-    }
-
-    function convertPercentageToCgpa() {
-      const totalPercentage = parseFloat(document.getElementById('percentage6').value);
-      const totalCgpa = parseFloat(document.getElementById('cgpa6').value);
-      const obtainedPercentage = parseFloat(document.getElementById('obtainedPercentage6').value);
-      const cgpa = (obtainedPercentage / totalPercentage) * totalCgpa;
-      updateOutput(`Obtained CGPA: ${cgpa.toFixed(2)}`);
-      showOutputContainer();
-    }
-
-    function resetContainer(containerId) {
-      const container = document.getElementById(containerId);
-      const inputs = container.querySelectorAll('input');
-      inputs.forEach(input => input.value = '');
-    }
-
-    const dropdownContainer = document.getElementById('dropdownContainer');
-    const converterContainer = document.getElementById('converterContainer');
-    const outputContainer = document.getElementById('outputContainer');
 
     function showDropdownContainer() {
-      dropdownContainer.style.display = 'block';
-      converterContainer.style.display = 'none';
-      outputContainer.style.display = 'none';
-    }
-
-    function showConverterContainer() {
-      dropdownContainer.style.display = 'none';
-      converterContainer.style.display = 'block';
-      outputContainer.style.display = 'none';
-    }
-
-    function showOutputContainer() {
-      dropdownContainer.style.display = 'none';
-      converterContainer.style.display = 'none';
-      outputContainer.style.display = 'block';
-    }
-
-    document.getElementById('submitConversion').addEventListener('click', () => {
-      const fromValue = document.getElementById('convertFrom').value;
-      const toValue = document.getElementById('convertTo').value;
-
-      document.querySelectorAll('.container').forEach(container => container.classList.remove('active'));
       document.getElementById('outputContainer').classList.remove('active');
-      document.getElementById('outputContainer').style.display = 'none';
+      document.getElementById('dropdownContainer').style.display = 'block';
+    }
 
-
-      if (fromValue && toValue) {
-          const containerId = conversionContainers[fromValue][toValue];
-          document.getElementById(containerId).classList.add('active');
-          showConverterContainer();
+    document.getElementById('submitConversion').onclick = () => {
+      const from = document.getElementById('convertFrom').value;
+      const to = document.getElementById('convertTo').value;
+      const key = `${from}-${to}`;
+      if (!from || !to || from === to || !containers[key]) {
+        alert('Please select a valid conversion between two different types.');
+      } else {
+        const result = containers[key].calc();
+        updateOutput(result);
       }
-
-    });
-
-    const conversionContainers = {
-      marks: {
-        cgpa: 'container1',
-        percentage: 'container2',
-      },
-      cgpa: {
-        marks: 'container3',
-        percentage: 'container4',
-      },
-      percentage: {
-        marks: 'container5',
-        cgpa: 'container6',
-      },
     };
   </script>
 </body>
